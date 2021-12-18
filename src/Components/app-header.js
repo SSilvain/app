@@ -1,8 +1,8 @@
-
+import "./app-header.css"
 
 const AppHeader = () => {
 	return(
-		<div>
+		<div className="app-header d-flex">
 			<h1>Todo list</h1>
 		</div>
 	)

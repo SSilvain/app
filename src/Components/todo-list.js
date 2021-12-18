@@ -1,17 +1,16 @@
 import TodoListItem from "./todo-list-item"
 
-const TodoList = ({todos}) => {
-	const elements = todos.map((item)=>{
-		return(
-			<li><TodoListItem {...item}/></li>
+const TodoList = ({ todos }) => {
+	const elements = todos.map((item) => {
+		const { id, ...itemProps } = item
+		return (
+			<li key={id}><TodoListItem {...itemProps} /></li>
 		)
 	})
-	return(
-		<div>
-			<ul>
-				{elements}
-			</ul>
-		</div>
+	return (
+		<ul className="list-group todo-list">
+			{elements}
+		</ul>
 	)
 }
 

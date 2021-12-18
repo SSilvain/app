@@ -1,8 +1,10 @@
+import "./search-panel.css"
+
 const SearchPanel = () => {
 	return(
-		<div>
-			<input placeholder="Enter..."/>
-		</div>
+		<input type="text"
+			className="form-control search-input"
+			placeholder="type to search" />
 	)
 }
 
